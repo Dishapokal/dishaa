@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image change</title>
+</head>
+<body>
+    <p>
+        <img alt="" src="img/hdest3.jpg" style="height: 185px; width: 298px" id="imgClickAndChange" />
+    </p>
+    <button onclick="changeImage()" > click</button> 
+</body>
+</html>
+<script>
+    function changeImage() {
+    if (document.getElementById("imgClickAndChange").src == "img/hamburg.jpg"){
+        document.getElementById("imgClickAndChange").src = "img/hamburg.jpg";
+    } else {
+        document.getElementById("imgClickAndChange").src = "img/hamburg.jpg";
+    }
+}
+</script>

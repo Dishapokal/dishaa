@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digital clock</title>
+    <style>
+        #clock{
+            border:3px solid rgb(21, 209, 215);
+            padding: 2rem 3rem;
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+</body>
+</html>
+<script>
+    setInterval(() => {
+        let now = new Date();
+        let date=now.getDate();
+        let mon=now.getMonth()+1;
+        let year=now.getFullYear();
+        let hr=now.getHours();
+        let min=now.getMinutes();
+        let sec=now.getSeconds();
+        let zone="AM";
+        document.getElementById("clock").innerHTML=hr+":"+min+":"+sec +" "+zone+"     "+date+":"+mon+":"+year;;
+
+        if(hr>=12){
+          if(hr>12){
+            hr-=12;
+            zone="PM";
+          }
+          else if(hr==0){
+            zone="AM";
+          }
+        }
+
+    }, 1000);
+    
+</script>

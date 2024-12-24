@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <form id="calculator">
+        <label for="num1">Enter first number:</label>
+        <input type="number" id="num1" required><br><br>
+
+        <label for="num2">Enter second number:</label>
+        <input type="number" id="num2" required><br><br>
+
+        <label for="num3">Enter third number:</label>
+        <input type="number" id="num3" required><br><br>
+
+
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+    <h2>Result: <span id="result"> </span></h2>
+
+    <script>
+        function calculate() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const num3 = parseFloat(document.getElementById("num3").value);
+            let result;
+           if(num1>num2 && num1>num3){
+            result = `num1 (${num1}) is the greatest`;
+           }else if(num2>num3&&num2>num1){
+            result = `num2 (${num2}) is the greatest`;
+            
+           }else{
+            result = `num3 (${num3}) is the greatest`;
+           }
+
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</body>
+</html>

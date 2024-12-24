@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <form id="calculator">
+        <label for="num1">Enter first number:</label>
+        <input type="number" id="num1" required><br><br>
+
+        <label for="num2">Enter second number:</label>
+        <input type="number" id="num2" required><br><br>
+
+        <button type="button" onclick="sum()">+</button>
+        <button type="button" onclick="sub()">-</button>
+        <button type="button" onclick="mul()">*</button>
+        <button type="button" onclick="div()">/</button>
+    </form>
+    <h2>Result: <span id="result"> </span></h2>
+
+    <script>
+            
+          
+            function sum(){
+                const num1 = parseFloat(document.getElementById("num1").value);
+                const num2 = parseFloat(document.getElementById("num2").value);
+                 result=num1+num2;
+                document.getElementById("result").innerText = result;
+            }
+            function sub(){
+                const num1 = parseFloat(document.getElementById("num1").value);
+                const num2 = parseFloat(document.getElementById("num2").value);
+                 result=num1-num2;
+                document.getElementById("result").innerText = result;
+            }
+            function mul(){
+                const num1 = parseFloat(document.getElementById("num1").value);
+                const num2 = parseFloat(document.getElementById("num2").value);
+                 result=num1*num2;
+                document.getElementById("result").innerText = result;
+            }
+            function div(){
+                const num1 = parseFloat(document.getElementById("num1").value);
+                const num2 = parseFloat(document.getElementById("num2").value);
+                 result=num1/num2;
+                document.getElementById("result").innerText = result;
+            }
+
+          // document.getElementById("result").innerText = result;
+      
+    </script>
+</body>
+</html>

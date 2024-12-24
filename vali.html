@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .form1 {
+            padding: 2rem;           
+        }
+       
+    </style>
+</head>
+<body>
+    <form class="form1">
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="email">
+        <span id="err" class="err"></span>
+        <br/><br/>
+
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" class="pass">
+        <span id="perr" class="perr"></span>
+        <br/><br/>
+
+        <label for="cpass">Confirm Password:</label>
+        <input type="password" id="cpass" class="cpass">
+        <span id="cperr" class="cperr"></span>
+        <br/><br/>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phno" class="phno">
+        <span id="phnoerr" class="phnoerr"></span>
+        <br/><br/>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male"> Male
+        <input type="radio" id="female" name="gender" value="female"> Female
+        <span id="gerr" class="gerr"></span>
+        <br/><br/>
+
+        <button type="button" onclick="validate()">Submit</button>
+    </form>
+
+    <script>
+        function validate() {
+            // Retrieve input values
+            const email = document.getElementById("email").value.trim();
+            const pass = document.getElementById("pass").value.trim();
+            const cpass = document.getElementById("cpass").value.trim();
+            const phno = document.getElementById("phno").value.trim();
+            const gender = document.getElementsByName("gender");
+
+            // Error spans
+            const err = document.getElementById("err");
+            const perr = document.getElementById("perr");
+            const cperr = document.getElementById("cperr");
+            const phnoerr = document.getElementById("phnoerr");
+            const gerr = document.getElementById("gerr");
+
+            // Reset error messages
+            err.textContent = '';
+            perr.textContent = '';
+            cperr.textContent = '';
+            phnoerr.textContent = '';
+            gerr.textContent = '';
+
+            let isValid = true;
+
+            // Validate email
+            if (!email) {
+                err.textContent = "Email is required.";
+                isValid = false;
+            } else if (!/\S+@\S+\.\S+/.test(email)) {
+                err.textContent = "Enter a valid email address.";
+                isValid = false;
+            }
+
+            // Validate password
+            if (!pass) {
+                perr.textContent = "Password is required.";
+                isValid = false;
+            } else if (pass.length < 6) {
+                perr.textContent = "Password must be at least 6 characters long.";
+                isValid = false;
+            }
+
+            // Validate confirm password
+            if (!cpass) {
+                cperr.textContent = "Confirm Password is required.";
+                isValid = false;
+            } else if (cpass !== pass) {
+                cperr.textContent = "Passwords do not match.";
+                isValid = false;
+            }
+
+            // Validate phone number
+            if (!phno) {
+                phnoerr.textContent = "Phone number is required.";
+                isValid = false;
+            } else if (!/^\d{10}$/.test(phno)) {
+                phnoerr.textContent = "Enter a valid 10-digit phone number.";
+                isValid = false;
+            }
+
+            // Validate gender
+            let genderSelected = false;
+            for (let i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    genderSelected = true;
+                    break;
+                }
+            }
+            if (!genderSelected) {
+                gerr.textContent = "Please select your gender.";
+                isValid = false;
+            }
+
+            // Final check
+            if (isValid) {
+                alert("Form submitted successfully!");
+            }
+        }
+    </script>
+</body>
+</html>
