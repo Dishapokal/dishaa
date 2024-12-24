@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!-- <link rel="stylesheet" href="login.css"> -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>login_form</title>
+    </head>
+<body>
+    <!-- <form style="padding-top: 15px;padding-left: 15px;"> 
+        <a href="home.html"><i class="fa-solid fa-backward" style="color:white;position: fixed;font-size: 30px;border:2px solid white;border-radius:50%;padding: 5px 10px;"></i></a>
+    
+    </form>-->
+    <section>
+        <div class="form-box">
+           <div class="form-value">
+            <form action="">
+                <h2>login</h2>
+            <div class="inputbox">
+                
+                <input type="email" required>
+                <label for="">Email</label>
+            </div> 
+            <div class="inputbox">
+               
+                <input type="password" required>
+                <label for="">Password</label>
+            </div> 
+            <div class="forget">
+                <label for="">
+                    <input type="checkbox">Remember Me 
+                    <!-- <a href="#"> Forget-Password</a> -->
+                </label>
+            </div> 
+            <div class="login">
+            <a  class="btn" href="header.html">Login In</a>  
+           </div>
+            <div class="register">
+                <p>don't have account  :   <a href="registration.html">  Register</a></p>
+            </div>           
+            </form>
+           </div> 
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+<style>
+@import url('https://fonts.googleapis.com/css2?family');
+*{
+    margin:0;
+    padding:0;
+   
+}
+body{ background:url(images/KAZAN.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+/*----------------------------------------*/
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}   
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 450;
+    background:transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{padding-top: 20px;
+    font-size:2em;
+    color:#fff;
+    text-align: center;
+
+}
+.inputbox{ position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+
+}
+.inputbox label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    transform:translateY(-50%);
+    color:#fff;
+    font-size: 1em;
+    pointer-events: none;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top:-5px;
+}
+
+.inputbox input{
+    width: 100%;
+    height:50px;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color:#fff;
+}
+
+.forget{
+    margin:-15px 0 15px;
+    font-size:.9em;
+    color:#fff;
+    display:flex;
+    justify-content: center;
+}
+.forget label input{
+    margin: 3px;
+    
+}
+
+.login{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.login a{
+   padding-top: 0.8rem;
+   padding-bottom: 0.8rem;
+   padding-left: 8rem;
+   padding-right: 8rem;
+    border-radius: 40px;
+    background: #fff;
+    color:black;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight:bold;
+}
+.login a:hover{
+    font-size:1.2em;
+    font-weight: 1000;
+    color:rgb(20, 95, 170);
+}
+.register{
+    font-size:.9em;
+    color:#fff;
+    text-align: center;
+    margin:15px 0 18px;
+}
+.register p a{
+    text-decoration: none;
+    color:#ffffff;
+    font-weight: 600;
+}
+.register p a:hover{
+    
+    text-decoration: underline;
+}
+</style>

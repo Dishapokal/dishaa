@@ -1,0 +1,236 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:80px;
+    background:#010101;
+    justify-content: space-between; 
+    /* border: 2px solid black; */
+}
+
+.logo {
+    width: 50%;  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(0, 153, 241, 0.784);
+    text-transform: uppercase;
+    padding: 10px 40px;
+   font-size: 32px;
+}
+
+nav {
+    width: 50%; 
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+    list-style-type: none;
+}
+
+li {
+    margin: 20px;
+}
+li a{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: rgb(30, 114, 167);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/* main start */
+.hero-section{
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    /* background: url(images/Amsterdam.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0a0f38;
+}
+
+.hero-section-title{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 80px;
+    text-align: center;
+    text-transform: capitalize; 
+}
+
+.hero-section-sub-heading{
+    text-align: center;
+    text-transform: capitalize;
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+/* main end */
+
+
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container styling */
+.travel-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Card styling */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card-content p {
+    color: #777;
+}
+
+.price {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+
+@media (max-width: 998px) {
+    .travel-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .travel-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 576px) {
+    .travel-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 150px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************footer*********************/
+
+.footer-basic {
+    padding:40px 0;
+    background-color:rgb(0, 0, 0);
+    color:white;
+  }  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:30px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid hsl(0, 75%, 98%);
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    color:rgb(255, 187, 99);
+    opacity:0.9;
+  }
+  .footer-basic .textbb{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #aaa;
+  }
+
+ 
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:18px;
+    color:#aaa;
+    margin-bottom:0;
+  }
+
+
+ 
